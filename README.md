@@ -1,6 +1,6 @@
 # Modal with Vanilla JavaScript
 
-About ten lines of code, without any shit added. Also bootstrap3 branch it the same, but with Bootstrap CSS.
+This is a old modal code, the master branch have some new one. About ten lines of code, without any shit added. Also bootstrap3 branch it the same, but with Bootstrap CSS.
 
 ```javascript
 

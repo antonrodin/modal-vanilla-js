@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal with Vanilla JS & CSS</title>
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+    
+    <div class="modal-azr" id="my-modal-1">
+        <div class="modal-azr-content">
+            <span class="close-modal">&times;</span>
+            <h1>Modal 1</h1>
+            <p>Text or some shitty content of your crapy modal...</p>
+        </div>
+    </div>
+
+    <button type="button" id="show-modal-1">Show Modal 1</button>
+
+    <script src="modal.js"></script>
+    <script>
+        
+        // Modal number One
+        const modal1 = new Modal("my-modal-1");
+        document.getElementById('show-modal-1').addEventListener('click', (e) => {
+            modal1.show();
+        });     
+
+    </script>
+</body>
+</html>

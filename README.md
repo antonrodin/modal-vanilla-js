@@ -33,3 +33,15 @@ modal1.hide(function() {
     console.log("Hide Modal");
 });
 ```
+
+Example 3. Custom event 'AzrModalClose'. This one is valid for execute some logic
+when user closes the modal. In my particular case to stop play video.
+
+```javascript
+    const modal3 = new Modal("my-modal-3");
+    modal3.show(doStuffOnOpen);
+
+    document.addEventListener('AzrModalClose', e => {
+        console.log("Modal Close is Triggered");
+    });
+```

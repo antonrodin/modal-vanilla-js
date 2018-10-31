@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Modal with Vanilla JS & CSS</title>
+    <link rel="stylesheet" href="modal.css">
+</head>
+<body>
+
+    <h1 class="header-title">Dispatch and listen the modal.close event</h1>
+
+    <div class="modal-azr" id="my-modal-3">
+        <div class="modal-azr-content">
+            <span class="close-modal">&times;</span>
+            <h1>Modal 3</h1>
+            <p>Text or some shitty content of your crapy modal...</p>
+        </div>
+    </div>
+
+    <script src="modal.js"></script>
+    <script>
+
+        // Modal number three
+        const modal3 = new Modal("my-modal-3");
+        
+        // Create callback for do stuff when open modal
+        function doStuffOnOpen() {
+            console.log("Open the new awesome custom modal");
+        }
+        modal3.show(doStuffOnOpen);
+
+        // Create event listener to do stuff when modal is closed.
+        // Sometimes is necesary to stop the video or any other kind off logic
+        document.addEventListener('AzrModalClose', e => {
+            console.log("Modal Close is Triggered");
+            let elem = document.querySelector(".header-title").innerHTML = "Modal is Closed";
+        });
+
+        
+
+    </script>
+</body>
+</html>
